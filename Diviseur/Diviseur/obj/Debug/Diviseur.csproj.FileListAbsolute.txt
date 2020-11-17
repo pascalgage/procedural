@@ -1,0 +1,7 @@
+C:\1ABCDEV\Diviseur\Diviseur\bin\Debug\Diviseur.exe.config
+C:\1ABCDEV\Diviseur\Diviseur\bin\Debug\Diviseur.exe
+C:\1ABCDEV\Diviseur\Diviseur\bin\Debug\Diviseur.pdb
+C:\1ABCDEV\Diviseur\Diviseur\obj\Debug\Diviseur.csprojAssemblyReference.cache
+C:\1ABCDEV\Diviseur\Diviseur\obj\Debug\Diviseur.csproj.CoreCompileInputs.cache
+C:\1ABCDEV\Diviseur\Diviseur\obj\Debug\Diviseur.exe
+C:\1ABCDEV\Diviseur\Diviseur\obj\Debug\Diviseur.pdb
