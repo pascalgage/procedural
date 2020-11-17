@@ -1,0 +1,7 @@
+C:\1ABCDEV\PGCD\bin\Debug\PGCD.exe.config
+C:\1ABCDEV\PGCD\bin\Debug\PGCD.exe
+C:\1ABCDEV\PGCD\bin\Debug\PGCD.pdb
+C:\1ABCDEV\PGCD\obj\Debug\PGCD.csprojAssemblyReference.cache
+C:\1ABCDEV\PGCD\obj\Debug\PGCD.csproj.CoreCompileInputs.cache
+C:\1ABCDEV\PGCD\obj\Debug\PGCD.exe
+C:\1ABCDEV\PGCD\obj\Debug\PGCD.pdb
