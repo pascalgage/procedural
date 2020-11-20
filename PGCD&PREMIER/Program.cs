@@ -18,7 +18,7 @@ namespace PGCD
 
                 //Entrez le premier entier positif
                 int A;
-                Console.WriteLine("Entrez un nombre entier A:");
+                Console.WriteLine("Entrez un nombre entier A positif non nul:");
                 A = int.Parse(Console.ReadLine());
 
                 bool test;
@@ -27,7 +27,7 @@ namespace PGCD
 
                 //Entrez le deuxième entier positif
                 int B;
-                Console.WriteLine("Entrez un nombre entier B:");
+                Console.WriteLine("Entrez un nombre entier B positif non nul:");
                 B = int.Parse(Console.ReadLine());
 
                 bool test2;
@@ -96,6 +96,6 @@ namespace PGCD
 
                 return Premier;
             }
-            }
         }
+    }
 }
