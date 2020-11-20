@@ -38,11 +38,11 @@ namespace PGCD
 
                 if (test == true)
                 {
-                    Console.WriteLine("le nombre saisie par l'utilisateur {0:#,###} est premier", A);
+                    Console.WriteLine("le nombre {0:#,###} est premier", A);
                 }
                 if (test2 == true)
                 {
-                    Console.WriteLine("le nombre saisie par l'utilisateur {0:#,###} est premier", B);
+                    Console.WriteLine("le nombre {0:#,###} est premier", B);
                 }
 
                 do
