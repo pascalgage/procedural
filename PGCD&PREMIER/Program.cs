@@ -39,7 +39,9 @@ namespace PGCD
                 if (test == true)
                 {
                     Console.WriteLine("le nombre {0:#,###} est premier", A);
-                } 
+                }
+
+                if (A == 2) { Console.WriteLine("2 est premier !"); }
                 
                 else if (A==0|A<0)
                 {
@@ -51,8 +53,10 @@ namespace PGCD
                 if (test2 == true)
                 {
                     Console.WriteLine("le nombre {0:#,###} est premier", B);
-                } 
-                
+                }
+
+                if (B == 2) { Console.WriteLine("2 est premier !"); }
+
                 else if (B==0|B<0)
                 {
                     Console.WriteLine("le nombre B N'EST PAS strictement positif ou non-nul !",B);
@@ -80,7 +84,7 @@ namespace PGCD
                 Console.WriteLine("Voulez-vous recommencer ? O/N");
                 redo = Console.ReadLine().ToLower();
 
-                if (redo != "o") { Console.WriteLine("Operation terminée !"); }
+                if (redo != "o") { Console.WriteLine("Opération terminée !"); }
 
             } while (redo == "o");
             
@@ -107,6 +111,7 @@ namespace PGCD
                         break;
                     }
                     Diviseur++;
+                    if (_Nbutilisateur == 2) { Console.WriteLine("Attention 2 est premier !"); }
                 } while (Diviseur <= Limite);
 
                 return Premier;
