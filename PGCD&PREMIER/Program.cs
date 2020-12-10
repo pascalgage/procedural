@@ -10,6 +10,7 @@ namespace PGCD
     {
         static void Main(string[] args)
         {
+            
             string redo = "o";
             do
             {
