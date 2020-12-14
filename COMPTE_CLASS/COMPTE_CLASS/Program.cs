@@ -11,7 +11,7 @@ namespace COMPTE_CLASS
         static void Main(string[] args)
         {
             //Outils de transfert (une variable)...
-            double _montant = 0;
+            
             
 
             //Création des objets Compte bancaire.....
