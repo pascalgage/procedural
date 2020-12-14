@@ -8,55 +8,82 @@ namespace COMPTE_CLASS
 {
     public class Compte
     {
-
+        
         //attributs....
-        private int numeroCompte;
+        private string numeroCompte;
         private double soldeCompte;
         private string nomTitulaire;
-        private int decouvert;
+        private double decouvert;
         
         //propriétés....
-        public int UNnumeroCompte { get => numeroCompte; }
+        public string UNnumeroCompte { get => numeroCompte; }
         public double UNsoldeCompte { get => soldeCompte; set => soldeCompte=value; }
         public string UNnomTitulaire { get => nomTitulaire; }
-        public int UNdecouvert { get => decouvert; }
+        public double UNdecouvert { get => decouvert; }
 
         //constructeur....
-        public Compte(int UNnumeroCompte, double UNsoldeCompte, string UNnomTitulaire, int UNdecouvert)
+        public Compte(string UNnumeroCompte, double UNsoldeCompte, string UNnomTitulaire, double UNdecouvert)
         {
-            numeroCompte = UNnumeroCompte;
-            soldeCompte = UNsoldeCompte;
-            nomTitulaire = UNnomTitulaire;
-            decouvert = UNdecouvert;
+            this.numeroCompte = UNnumeroCompte; 
+            this.soldeCompte = UNsoldeCompte;
+            this.nomTitulaire = UNnomTitulaire;
+            this.decouvert = UNdecouvert;
         }
         
         //méthodes....
         public void Crediter(double _montant)
         {
-            soldeCompte = soldeCompte + _montant;
+            this.soldeCompte += _montant;
             
         }
 
-        public void Debiter(double _montant)
+        public bool Debiter(double _montant)
         {
-            soldeCompte = soldeCompte - _montant;
-            if (soldeCompte<decouvert) {Console.WriteLine("Pas autorisé"); } else { Console.WriteLine("OK"); }
+       
+
+            if (( this.soldeCompte-_montant) < decouvert)
+            {
+                return false;
+            }
+            else
+            {
+                this.soldeCompte -= _montant;
+                return true;
+            }
         }
 
-        public void Transferer(double _montant,int UNnumeroCompte)
+        public void Transferer(double _montant,Compte _beneficiaire)
         {
-            Console.WriteLine("Quel compte à créditer ?");
-            UNnumeroCompte = int.Parse(Console.ReadLine());
+          //  bool transfertPossible;
 
+            if (_montant > 0)
+            {
+                if (this.Debiter(_montant) == true)
+                {
+                    _beneficiaire.Crediter(_montant);
+
+                }
+
+            }
             
 
         }
-        public void Comparer()
+        public void Comparer(Compte _depart,Compte _arrivee)
         {
+            if (_depart.soldeCompte > _arrivee.soldeCompte)
+            {
+                Console.WriteLine("Est supérieur");
+            }
+            else
+            {
+                Console.WriteLine("est inférieur");
+            }
+
 
         }
+        
 
-
+        //L'affichage des comptes.....
         public string Infocompte()
         {
             return "N°:"+numeroCompte + " "+"Solde:" + soldeCompte + " "+"Nom:" + nomTitulaire + " " + decouvert+" euros";
