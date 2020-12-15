@@ -10,35 +10,42 @@ namespace COMPTE_CLASS
     {
         static void Main(string[] args)
         {
-            //Outils de transfert (une variable)...
-            
             
 
             //Création des objets Compte bancaire.....
-            Compte unCompte;
-            unCompte = new Compte("12345",3800,"Gage Pascal",-200);
+            Compte Gage;
+            Gage = new Compte("12345",3800,"Gage Pascal",-200);
 
-            Compte deuxCompte;
-            deuxCompte = new Compte("54721", 1200, "Benitez Charles", -700);
+            Compte Benitez;
+            Benitez = new Compte("54721", 1200, "Benitez Charles", -700);
 
-            //OPERATION DE TRANSFERT....
+            Compte Anguenot;
+            Anguenot = new Compte("68751", 1000, "Anguenot Guillaume", -100);
 
-            //Console.WriteLine("Combien voulez-vous transférer ?");
-            //_montant = double.Parse(Console.ReadLine());
-
-
-            //unCompte.Debiter(_montant);
-            //deuxCompte.Crediter(_montant);
-
-            unCompte.Transferer(2500, deuxCompte);
-            unCompte.Comparer(unCompte, deuxCompte);
-
+            //les fonctionnalités...
             
+            Console.WriteLine(Gage.ToString());
+            Console.WriteLine(Benitez);
+            Console.WriteLine(Anguenot);
+
+            Gage.Transferer(1300, Benitez);
+            Console.WriteLine(Gage.ToString());
+            Console.WriteLine(Benitez);
+            if (Gage.Superieur(Benitez)==1)
+            {
+                Console.WriteLine("Solde supérieur");
+            }
+            else if (Gage.Superieur(Benitez) == 0)
+            {
+                Console.WriteLine("Même solde");
+            }
+            else
+            {
+                Console.WriteLine("Solde inférieur");
+
+            }
+
            
-            
-
-            Console.WriteLine(unCompte.Infocompte());
-            Console.WriteLine(deuxCompte.Infocompte());
 
             Console.ReadKey();
         }

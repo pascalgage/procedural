@@ -68,25 +68,18 @@ namespace COMPTE_CLASS
             
 
         }
-        public void Comparer(Compte _depart,Compte _arrivee)
+        public int Superieur(Compte _B)
         {
-            if (_depart.soldeCompte > _arrivee.soldeCompte)
-            {
-                Console.WriteLine("Est supérieur");
-            }
-            else
-            {
-                Console.WriteLine("est inférieur");
-            }
-
-
+          return  this.soldeCompte.CompareTo(_B.soldeCompte);
         }
+       
+
         
 
         //L'affichage des comptes.....
-        public string Infocompte()
+        public override string ToString()
         {
-            return "N°:"+numeroCompte + " "+"Solde:" + soldeCompte + " "+"Nom:" + nomTitulaire + " " + decouvert+" euros";
+            return "compte N°:"+numeroCompte + " "+"Solde:" + soldeCompte + " "+"Nom:" + nomTitulaire + " " + decouvert+" euros";
         }
 
 
