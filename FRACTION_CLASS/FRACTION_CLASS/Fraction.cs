@@ -23,24 +23,24 @@ namespace FRACTION_CLASS
             this.denominateur = UNdenominateur;
             
         }
-        //constructeur à vide....
+        //Constructeur vide...
         public Fraction()
         {
             this.numerateur = 0;
             this.denominateur = 0;
-
-           
         }
+        
         //méthodes....
-        public int Infos()
+        public double Infos(double numerateur,double denominateur)
         {
-            int resultat;
-            return resultat= numerateur/denominateur; 
+          
+            return numerateur / denominateur ;
+            
         }
 
         public override string ToString()
         {
-            return +numerateur+"/"+denominateur;
+            return +this.numerateur+"/"+this.denominateur;
         }
 
         public void Oppose(int numerateur,int denominateur)
@@ -125,8 +125,7 @@ namespace FRACTION_CLASS
             NUM=(this.numerateur * _F.denominateur) + (_F.numerateur * this.denominateur);
             DEN = (this.denominateur * _F.denominateur);
             Console.WriteLine(NUM+"/"+DEN);
-
-            
+ 
             
         }
     }
