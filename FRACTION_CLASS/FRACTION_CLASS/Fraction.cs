@@ -37,19 +37,23 @@ namespace FRACTION_CLASS
             int resultat;
             return resultat= numerateur/denominateur; 
         }
+
         public override string ToString()
         {
             return +numerateur+"/"+denominateur;
         }
+
         public void Oppose(int numerateur,int denominateur)
         {
             this.numerateur = -(numerateur);
         }
+
         public void Inverse(int numerateur, int denominateur)
         {
             this.numerateur = denominateur;
             this.denominateur = numerateur;
         }
+
         public bool Superieur( Fraction _F)
         {
             if ((this.numerateur/this.denominateur) < (_F.numerateur / _F.denominateur))
@@ -62,6 +66,7 @@ namespace FRACTION_CLASS
                 return true;
             }
         }
+
         public bool Egal(Fraction _F)
         {
             if ((this.numerateur / this.denominateur) == (_F.numerateur / _F.denominateur))
@@ -75,6 +80,7 @@ namespace FRACTION_CLASS
             }
 
         }
+
         private int Reduire()
         {
             List<int> TAB = new List<int>();
@@ -104,6 +110,7 @@ namespace FRACTION_CLASS
             
 
         }
+
         public void ToDisplay(Fraction _F)
         {
             
