@@ -52,17 +52,12 @@ namespace FRACTION_CLASS
         }
         public bool Superieur( Fraction _F)
         {
-<<<<<<< HEAD
             if ((this.numerateur/this.denominateur) < (_F.numerateur / _F.denominateur))
-=======
-            if ((this.numerateur/this.denominateur) > (_F.numerateur / _F.denominateur))
->>>>>>> e7e68b39d7e85ed3fecba387415032f397df99a9
             {
                 return false;
             }
             else
             {
-<<<<<<< HEAD
                 Console.WriteLine(this+ " est supérieur à "+_F);
                 return true;
             }
@@ -115,15 +110,5 @@ namespace FRACTION_CLASS
            Console.WriteLine(this.numerateur/ _F.Reduire()+"/"+this.denominateur/_F.Reduire());
 
         }
-=======
-                Console.WriteLine("est supérieur !!!");
-                return true;
-            }
-        }
-
-
-
-
->>>>>>> e7e68b39d7e85ed3fecba387415032f397df99a9
     }
 }
