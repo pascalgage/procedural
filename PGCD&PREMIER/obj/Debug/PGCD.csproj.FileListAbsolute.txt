@@ -26,3 +26,10 @@ C:\PASKYprocedural\procedural\PGCD&PREMIER\obj\Debug\PGCD.csprojAssemblyReferenc
 C:\PASKYprocedural\procedural\PGCD&PREMIER\obj\Debug\PGCD.csproj.CoreCompileInputs.cache
 C:\PASKYprocedural\procedural\PGCD&PREMIER\obj\Debug\PGCD.exe
 C:\PASKYprocedural\procedural\PGCD&PREMIER\obj\Debug\PGCD.pdb
+C:\TP_gageABC\procedural2\procedural\PGCD&PREMIER\bin\Debug\PGCD.exe.config
+C:\TP_gageABC\procedural2\procedural\PGCD&PREMIER\bin\Debug\PGCD.exe
+C:\TP_gageABC\procedural2\procedural\PGCD&PREMIER\bin\Debug\PGCD.pdb
+C:\TP_gageABC\procedural2\procedural\PGCD&PREMIER\obj\Debug\PGCD.csprojAssemblyReference.cache
+C:\TP_gageABC\procedural2\procedural\PGCD&PREMIER\obj\Debug\PGCD.csproj.CoreCompileInputs.cache
+C:\TP_gageABC\procedural2\procedural\PGCD&PREMIER\obj\Debug\PGCD.exe
+C:\TP_gageABC\procedural2\procedural\PGCD&PREMIER\obj\Debug\PGCD.pdb

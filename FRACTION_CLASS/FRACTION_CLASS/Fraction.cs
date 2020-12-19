@@ -105,7 +105,7 @@ namespace FRACTION_CLASS
                 }
 
             } while (D < numerateur && D < denominateur);
-
+            
             return TAB.Last();
             
 
@@ -116,6 +116,18 @@ namespace FRACTION_CLASS
             
            Console.WriteLine(this.numerateur/ _F.Reduire()+"/"+this.denominateur/_F.Reduire());
 
+        }
+
+        public void Plus(Fraction _F)
+        {
+            int NUM;
+            int DEN;
+            NUM=(this.numerateur * _F.denominateur) + (_F.numerateur * this.denominateur);
+            DEN = (this.denominateur * _F.denominateur);
+            Console.WriteLine(NUM+"/"+DEN);
+
+            
+            
         }
     }
 }

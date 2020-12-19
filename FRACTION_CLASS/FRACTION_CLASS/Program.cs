@@ -11,23 +11,18 @@ namespace FRACTION_CLASS
         static void Main(string[] args)
         {
             Fraction F1;
-            F1 = new Fraction(120,-150);
+            F1 = new Fraction(63,98);
 
             Fraction F2;
-            F2 = new Fraction(25, 5);
+            F2 = new Fraction(1, 14);
 
             Fraction F3;
-            F3 = new Fraction(0, 1);
+            F3 = new Fraction(4, 7);
 
 
             F1.ToDisplay(F1);
-            F2.ToDisplay(F2);
-            
-            
 
-            Console.WriteLine(F1);
-           
-
+            F2.Plus(F3);
 
             Console.ReadLine();
         }
