@@ -122,11 +122,19 @@ namespace FRACTION_CLASS
         {
             int NUM;
             int DEN;
-            NUM=(this.numerateur * _F.denominateur) + (_F.numerateur * this.denominateur);
+
+            NUM = (this.numerateur * _F.denominateur) + (_F.numerateur * this.denominateur);
+            
+
             DEN = (this.denominateur * _F.denominateur);
-            Console.WriteLine(NUM+"/"+DEN);
- 
+
+            Fraction G;
+            G = new Fraction(NUM, DEN);
+
+            G.ToDisplay(G);
+            
             
         }
+        
     }
 }
