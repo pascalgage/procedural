@@ -10,17 +10,40 @@ namespace FRACTION_CLASS
     {
         static void Main(string[] args)
         {
+            
+
+
+            int N = 0;
+            int D = 0;
+
+            int M = 0;
+            int E = 0;
+            
+               
+                Console.WriteLine("Entrez le numérateur de la fraction 1 " );
+                N = int.Parse(Console.ReadLine());
+                Console.WriteLine("Entrez le dénominateur de la fraction 1 " );
+                D = int.Parse(Console.ReadLine());
+                Console.WriteLine("Entrez le numérateur de la fraction 2 ");
+                M = int.Parse(Console.ReadLine());
+                Console.WriteLine("Entrez le dénominateur de la fraction 2 ");
+                E = int.Parse(Console.ReadLine());
+
+
+
+
             Fraction F1;
-            F1 = new Fraction(-105, 45);
-
+            F1 = new Fraction(N, D);
             Fraction F2;
-            F2 = new Fraction(-2,3);
+            F2 = new Fraction(M, E);
 
-            Fraction F3;
-            F3 = new Fraction(4,5);
 
-            F1.ToDisplay(F1);
-            F2.Plus(F3);
+            Console.WriteLine("L'addition des deux fractions est égale à: "); F1.Plus(F2);
+            Console.WriteLine("La soustraction des deux fractions est égale à: "); F1.Moins(F2);
+
+
+
+
 
             Console.ReadLine();
         }

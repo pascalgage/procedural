@@ -135,6 +135,19 @@ namespace FRACTION_CLASS
             
             
         }
+        public void Moins(Fraction _F)
+        {
+            int NUM;
+            int DEN;
+
+            NUM = (this.numerateur * _F.denominateur) - (_F.numerateur * this.denominateur);
+            DEN = (this.denominateur * _F.denominateur);
+
+            Fraction H;
+            H = new Fraction(NUM,DEN);
+
+            H.ToDisplay(H);
+        }
         
     }
 }
