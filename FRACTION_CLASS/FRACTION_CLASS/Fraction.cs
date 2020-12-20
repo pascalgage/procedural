@@ -48,10 +48,11 @@ namespace FRACTION_CLASS
             this.numerateur = -(numerateur);
         }
 
-        public void Inverse(int numerateur, int denominateur)
+        public void Inverse()
         {
-            this.numerateur = denominateur;
-            this.denominateur = numerateur;
+            this.numerateur = this.denominateur;
+            this.denominateur = this.numerateur;
+            
         }
 
         public bool Superieur( Fraction _F)
@@ -147,6 +148,32 @@ namespace FRACTION_CLASS
             H = new Fraction(NUM,DEN);
 
             H.ToDisplay(H);
+        }
+        public void Multiplie(Fraction _F)
+        {
+            int NUM;
+            int DEN;
+
+            NUM = (this.numerateur * _F.numerateur);
+            DEN = (this.denominateur * _F.denominateur);
+
+            Fraction I;
+            I = new Fraction(NUM, DEN);
+
+            I.ToDisplay(I);
+        }
+        public void Divise(Fraction _F)
+        {
+            int NUM;
+            int DEN;
+
+            NUM = (this.numerateur * _F.denominateur);
+            DEN = (this.denominateur * _F.numerateur);
+
+            Fraction J;
+            J = new Fraction(NUM, DEN);
+
+            J.ToDisplay(J);
         }
         
     }
