@@ -43,6 +43,7 @@ namespace FRACTION_CLASS
             Console.WriteLine("La multiplication des deux fractions est égale à: "); F1.Multiplie(F2);
             Console.WriteLine("La division des deux fractions est égale à: "); F1.Divise(F2);
 
+            
 
 
 

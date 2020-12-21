@@ -23,11 +23,11 @@ namespace FRACTION_CLASS
             this.denominateur = UNdenominateur;
             
         }
-        //Constructeur vide...
+        //Constructeur à vide...
         public Fraction()
         {
             this.numerateur = 0;
-            this.denominateur = 0;
+            this.denominateur = 1;
         }
         
         //méthodes....
@@ -89,11 +89,16 @@ namespace FRACTION_CLASS
             
             int numerateur=this.numerateur;
             int denominateur=this.denominateur;
+
             int D = 0;
 
-            if (numerateur < 0) { numerateur=-numerateur; }
-            if (denominateur < 0) {denominateur=-denominateur; }
-            
+            if (numerateur < 0) { numerateur = -numerateur; }
+            if (denominateur < 0) { denominateur = -denominateur; }
+            if (numerateur < 0 && denominateur < 0)
+            {
+                numerateur = -(numerateur);
+                denominateur = -(denominateur);
+            }
 
             do
             {
@@ -114,7 +119,7 @@ namespace FRACTION_CLASS
 
         public void ToDisplay(Fraction _F)
         {
-            
+           
            Console.WriteLine(this.numerateur/ _F.Reduire()+"/"+this.denominateur/_F.Reduire());
 
         }
@@ -125,9 +130,13 @@ namespace FRACTION_CLASS
             int DEN;
 
             NUM = (this.numerateur * _F.denominateur) + (_F.numerateur * this.denominateur);
-            
-
             DEN = (this.denominateur * _F.denominateur);
+
+            if (NUM < 0 && DEN < 0)
+            {
+                NUM = -(NUM);
+                DEN = -(DEN);
+            }
 
             Fraction G;
             G = new Fraction(NUM, DEN);
@@ -144,6 +153,12 @@ namespace FRACTION_CLASS
             NUM = (this.numerateur * _F.denominateur) - (_F.numerateur * this.denominateur);
             DEN = (this.denominateur * _F.denominateur);
 
+            if (NUM < 0 && DEN < 0)
+            {
+                NUM = -(NUM);
+                DEN = -(DEN);
+            }
+
             Fraction H;
             H = new Fraction(NUM,DEN);
 
@@ -157,6 +172,12 @@ namespace FRACTION_CLASS
             NUM = (this.numerateur * _F.numerateur);
             DEN = (this.denominateur * _F.denominateur);
 
+            if (NUM < 0 && DEN < 0)
+            {
+                NUM = -(NUM);
+                DEN = -(DEN);
+            }
+
             Fraction I;
             I = new Fraction(NUM, DEN);
 
@@ -169,6 +190,12 @@ namespace FRACTION_CLASS
 
             NUM = (this.numerateur * _F.denominateur);
             DEN = (this.denominateur * _F.numerateur);
+
+            if (NUM < 0 && DEN < 0)
+            {
+                NUM = -(NUM);
+                DEN = -(DEN);
+            }
 
             Fraction J;
             J = new Fraction(NUM, DEN);
