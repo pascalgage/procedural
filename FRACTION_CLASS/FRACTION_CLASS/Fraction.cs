@@ -92,8 +92,16 @@ namespace FRACTION_CLASS
 
             int D = 0;
 
-            if (numerateur < 0) { numerateur = -numerateur; }
-            if (denominateur < 0) { denominateur = -denominateur; }
+            if (numerateur < 0) 
+            { 
+                numerateur = -numerateur;
+            }
+
+            if (denominateur < 0)
+            { 
+                denominateur = -denominateur;
+            }
+
             if (numerateur < 0 && denominateur < 0)
             {
                 numerateur = -(numerateur);
@@ -132,6 +140,11 @@ namespace FRACTION_CLASS
             NUM = (this.numerateur * _F.denominateur) + (_F.numerateur * this.denominateur);
             DEN = (this.denominateur * _F.denominateur);
 
+            if (NUM == 0)
+            {
+                DEN = 0;
+            }
+            
             if (NUM < 0 && DEN < 0)
             {
                 NUM = -(NUM);
@@ -153,6 +166,11 @@ namespace FRACTION_CLASS
             NUM = (this.numerateur * _F.denominateur) - (_F.numerateur * this.denominateur);
             DEN = (this.denominateur * _F.denominateur);
 
+            if (NUM == 0)
+            {
+                DEN = 0;
+            }
+
             if (NUM < 0 && DEN < 0)
             {
                 NUM = -(NUM);
@@ -172,6 +190,11 @@ namespace FRACTION_CLASS
             NUM = (this.numerateur * _F.numerateur);
             DEN = (this.denominateur * _F.denominateur);
 
+            if (NUM == 0)
+            {
+                DEN = 0;
+            }
+
             if (NUM < 0 && DEN < 0)
             {
                 NUM = -(NUM);
@@ -190,6 +213,11 @@ namespace FRACTION_CLASS
 
             NUM = (this.numerateur * _F.denominateur);
             DEN = (this.denominateur * _F.numerateur);
+
+            if (NUM==0)
+            {
+                DEN = 0;
+            }
 
             if (NUM < 0 && DEN < 0)
             {
