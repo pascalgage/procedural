@@ -13,9 +13,19 @@ namespace FRACTION_CLASS
         private int denominateur;
 
         //propriétés....
-        public int UNnumerateur { get => numerateur; set => numerateur = value; }
-        public int UNdenominateur { get=> denominateur; set=> denominateur =value; }
+        public int UNnumerateur
+        {
+            get { return numerateur; }
+
+            set { numerateur = value; }
+        }
         
+        public int UNdenominateur
+        {
+            get { return denominateur; }
+
+            set { denominateur = value; }
+        }
         //constructeur....
         public Fraction(int UNnumerateur, int UNdenominateur)
         {
@@ -31,11 +41,12 @@ namespace FRACTION_CLASS
         }
         
         //méthodes....
-        public double Infos(double numerateur,double denominateur)
+        public double Infos(double N,double O)
         {
-          
-            return numerateur / denominateur ;
-            
+            double resultN;
+            resultN= N / O;
+            Console.WriteLine(resultN);
+            return resultN;  
         }
 
         public override string ToString()
@@ -43,21 +54,24 @@ namespace FRACTION_CLASS
             return +this.numerateur+"/"+this.denominateur;
         }
 
-        public void Oppose(int numerateur,int denominateur)
+        public string Oppose()
         {
-            this.numerateur = -(numerateur);
+            string fractionOppose;
+            fractionOppose=-(this.numerateur)+"/"+this.denominateur;
+            Console.WriteLine(fractionOppose);
+            return fractionOppose;
         }
 
         public void Inverse()
         {
             this.numerateur = this.denominateur;
             this.denominateur = this.numerateur;
-            
+           
         }
 
-        public bool Superieur( Fraction _F)
+        public bool Superieur(Fraction _F)
         {
-            if ((this.numerateur/this.denominateur) < (_F.numerateur / _F.denominateur))
+            if ((this.numerateur/this.denominateur) <= (_F.numerateur / _F.denominateur))
             {
                 return false;
             }
@@ -82,7 +96,7 @@ namespace FRACTION_CLASS
 
         }
 
-        private int Reduire()
+        private int GetPgcd()
         {
             List<int> TAB = new List<int>();
 
@@ -125,10 +139,10 @@ namespace FRACTION_CLASS
 
         }
 
-        public void ToDisplay(Fraction _F)
+        private void Reduire(Fraction _F)
         {
            
-           Console.WriteLine(this.numerateur/ _F.Reduire()+"/"+this.denominateur/_F.Reduire());
+           Console.WriteLine(this.numerateur/ _F.GetPgcd()+"/"+this.denominateur/_F.GetPgcd());
 
         }
 
@@ -154,10 +168,11 @@ namespace FRACTION_CLASS
             Fraction G;
             G = new Fraction(NUM, DEN);
 
-            G.ToDisplay(G);
+            G.Reduire(G);
             
             
         }
+
         public void Moins(Fraction _F)
         {
             int NUM;
@@ -180,8 +195,9 @@ namespace FRACTION_CLASS
             Fraction H;
             H = new Fraction(NUM,DEN);
 
-            H.ToDisplay(H);
+            H.Reduire(H);
         }
+
         public void Multiplie(Fraction _F)
         {
             int NUM;
@@ -204,8 +220,9 @@ namespace FRACTION_CLASS
             Fraction I;
             I = new Fraction(NUM, DEN);
 
-            I.ToDisplay(I);
+            I.Reduire(I);
         }
+
         public void Divise(Fraction _F)
         {
             int NUM;
@@ -228,7 +245,7 @@ namespace FRACTION_CLASS
             Fraction J;
             J = new Fraction(NUM, DEN);
 
-            J.ToDisplay(J);
+            J.Reduire(J);
         }
         
     }
