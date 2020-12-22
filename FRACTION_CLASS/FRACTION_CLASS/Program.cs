@@ -33,7 +33,6 @@ namespace FRACTION_CLASS
             Fraction F2;
             F2 = new Fraction(M, E);
 
-
             Console.WriteLine("L'addition de "+F1.ToString()+" et de "+F2.ToString()+" est  égale à: "); F1.Plus(F2);
             Console.WriteLine("La soustraction des deux fractions est égale à: "); F1.Moins(F2);
             Console.WriteLine("La multiplication des deux fractions est égale à: "); F1.Multiplie(F2);
