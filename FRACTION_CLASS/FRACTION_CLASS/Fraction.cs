@@ -56,10 +56,19 @@ namespace FRACTION_CLASS
 
         public string Oppose()
         {
-            string fractionOpposee;
-            fractionOpposee=-(this.numerateur)+"/"+this.denominateur;
-            Console.WriteLine(fractionOpposee);
-            return fractionOpposee;
+            string fractionOppose;
+
+            if(this.numerateur <0 && this.denominateur < 0)
+            {
+                fractionOppose = (this.numerateur) + "/" + -(this.denominateur);
+            }
+            else
+            {
+                fractionOppose = -(this.numerateur) + "/" + this.denominateur;
+            }
+            
+            Console.WriteLine(fractionOppose);
+            return fractionOppose;
         }
 
         public void Inverse()
