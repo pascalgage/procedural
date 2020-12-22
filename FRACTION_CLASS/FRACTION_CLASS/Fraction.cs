@@ -64,8 +64,7 @@ namespace FRACTION_CLASS
 
         public void Inverse()
         {
-            this.numerateur = this.denominateur;
-            this.denominateur = this.numerateur;
+            
            
         }
 
