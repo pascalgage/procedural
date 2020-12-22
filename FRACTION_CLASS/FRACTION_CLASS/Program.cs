@@ -10,7 +10,7 @@ namespace FRACTION_CLASS
     {
         static void Main(string[] args)
         {
-            string redo = "O";
+            string redo;
             do
             {
 
@@ -21,13 +21,13 @@ namespace FRACTION_CLASS
             int M;
             int E;
               
-                Console.WriteLine("Entrez le numérateur de la fraction 1: " );
+                Console.WriteLine("Entrez le numérateur (entier non-nul) de la fraction 1 : ");
                 N = int.Parse(Console.ReadLine());
-                Console.WriteLine("Entrez le dénominateur de la fraction 1: " );
+                Console.WriteLine("Entrez le dénominateur (entier non-nul) de la fraction 1: ");
                 D = int.Parse(Console.ReadLine());
-                Console.WriteLine("Entrez le numérateur de la fraction 2: ");
+                Console.WriteLine("Entrez le numérateur (entier non-nul) de la fraction 2: ");
                 M = int.Parse(Console.ReadLine());
-                Console.WriteLine("Entrez le dénominateur de la fraction 2: ");
+                Console.WriteLine("Entrez le dénominateur (entier non-nul) de la fraction 2: ");
                 E = int.Parse(Console.ReadLine());
 
             Console.Clear();
