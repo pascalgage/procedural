@@ -40,6 +40,7 @@ namespace FRACTION_CLASS
             Console.WriteLine("La division des deux fractions est égale à: "); F1.Divise(F2);
             
             F1.Superieur(F2);
+            F1.Inferieur(F2);
             F1.Egal(F2);
 
             Console.WriteLine("La fraction " + F1.ToString() + " est égale à:");

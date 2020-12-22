@@ -45,7 +45,7 @@ namespace FRACTION_CLASS
         {
             double resultN;
             resultN= N / O;
-            Console.WriteLine(resultN);
+            Console.WriteLine(Math.Round(resultN,2));
             return resultN;  
         }
 
@@ -78,6 +78,19 @@ namespace FRACTION_CLASS
             else
             {
                 Console.WriteLine(this+ " est supérieur à "+_F);
+                return true;
+            }
+        }
+
+        public bool Inferieur(Fraction _F)
+        {
+            if ((this.numerateur / this.denominateur) >= (_F.numerateur / _F.denominateur))
+            {
+                return false;
+            }
+            else
+            {
+                Console.WriteLine(this + " est inférieur à " + _F);
                 return true;
             }
         }
