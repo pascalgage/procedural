@@ -242,6 +242,8 @@ namespace FRACTION_CLASS
             I = new Fraction(NUM, DEN);
 
             I.Reduire(I);
+            Console.WriteLine("soit en valeur numérique : ");
+            I.Infos(NUM,DEN);
         }
 
         public void Divise(Fraction _F)

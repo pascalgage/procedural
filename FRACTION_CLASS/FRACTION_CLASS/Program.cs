@@ -10,6 +10,10 @@ namespace FRACTION_CLASS
     {
         static void Main(string[] args)
         {
+            string redo = "O";
+            do
+            {
+
             
             int N;
             int D;
@@ -54,8 +58,16 @@ namespace FRACTION_CLASS
             F1.Oppose();
             Console.Write("L'opposé de la fraction " + F2.ToString() + " est: ");
             F2.Oppose();
+            Console.WriteLine(" ");
 
-            
+
+
+            //Fin du calculateur...Procédure recommencer !Do..While!
+            Console.WriteLine("Souhaitez-vous effectuer un autre calcul ? O/N");
+            redo = (Console.ReadLine()).ToUpper();
+            if (redo != "O") { Console.WriteLine("Opération terminée !"); }
+            } while (redo == "O");
+
 
 
             Console.ReadKey();
