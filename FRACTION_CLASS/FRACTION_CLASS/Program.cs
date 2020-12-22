@@ -58,7 +58,7 @@ namespace FRACTION_CLASS
             
 
 
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }
