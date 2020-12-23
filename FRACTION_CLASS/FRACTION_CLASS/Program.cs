@@ -59,9 +59,8 @@ namespace FRACTION_CLASS
             Console.Write("L'opposé de la fraction " + F2.ToString() + " est: ");
             F2.Oppose();
             Console.WriteLine(" ");
-
-
-
+            
+                
             //Fin du calculateur...Procédure recommencer !Do..While!
             Console.WriteLine("Souhaitez-vous effectuer un autre calcul ? O/N");
             redo = (Console.ReadLine()).ToUpper();

@@ -73,8 +73,10 @@ namespace FRACTION_CLASS
 
         public void Inverse()
         {
+            int temp = this.numerateur;
+            this.numerateur = this.denominateur;
+            this.denominateur = temp;
             
-           
         }
 
         public bool Superieur(Fraction _F)
