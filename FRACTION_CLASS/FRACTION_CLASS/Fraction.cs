@@ -59,9 +59,45 @@ namespace FRACTION_CLASS
 
 
 
+        
+
         public override string ToString()
         {
-            return +this.numerateur+"/"+this.denominateur;
+            string chaineFraction = "";
+
+            if (this.denominateur == 1)
+            {
+                chaineFraction += this.numerateur;
+            }
+
+            else
+            {
+
+             if (this.denominateur < 0)
+                    {
+                    if (this.numerateur > 0)
+                    {
+                        chaineFraction += (-this.numerateur) + "/" + (-this.denominateur);
+                    }
+                    else
+                    {
+                        chaineFraction += (-this.numerateur) + "/" + (-this.denominateur);
+
+                    }
+
+
+                }
+                else
+                    {
+
+
+                   chaineFraction += this.numerateur + "/" + this.denominateur;
+
+
+                }
+
+            }
+            return chaineFraction;
         }
 
         public string Oppose()
@@ -191,13 +227,30 @@ namespace FRACTION_CLASS
             {
                 Console.WriteLine(this.numerateur/this.GetPgcd());
             }
-            else
+           if(this.denominateur/this.GetPgcd()==-1)
             {
-            Console.WriteLine(this.numerateur/this.GetPgcd()+"/"+this.denominateur/this.GetPgcd());
+                Console.WriteLine(-this.numerateur/this.GetPgcd());
             }
+            
            if(this.numerateur/this.GetPgcd()==0)
             {
             Console.WriteLine(this.numerateur/this.GetPgcd());
+            }
+
+           if(this.denominateur/this.GetPgcd()<0)
+            {
+                if(this.numerateur/this.GetPgcd()>0)
+                {
+                    Console.WriteLine((-this.numerateur/this.GetPgcd())+"/"+(-this.denominateur/this.GetPgcd()));
+                }
+                else
+                {
+                     Console.WriteLine((-this.numerateur/this.GetPgcd())+"/"+(-this.denominateur/this.GetPgcd()));
+                }
+            }
+            else
+            {
+                Console.WriteLine(this.numerateur/this.GetPgcd()+"/"+this.denominateur/this.GetPgcd());
             }
            
            
