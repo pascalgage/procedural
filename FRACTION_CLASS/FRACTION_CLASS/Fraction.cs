@@ -57,10 +57,6 @@ namespace FRACTION_CLASS
             return resultN;  
         }
 
-
-
-        
-
         public override string ToString()
         {
             string chaineFraction = "";
@@ -69,12 +65,11 @@ namespace FRACTION_CLASS
             {
                 chaineFraction += this.numerateur;
             }
-
             else
             {
 
              if (this.denominateur < 0)
-                    {
+                {
                     if (this.numerateur > 0)
                     {
                         chaineFraction += (-this.numerateur) + "/" + (-this.denominateur);
@@ -84,18 +79,11 @@ namespace FRACTION_CLASS
                         chaineFraction += (-this.numerateur) + "/" + (-this.denominateur);
 
                     }
-
-
                 }
                 else
                     {
-
-
                    chaineFraction += this.numerateur + "/" + this.denominateur;
-
-
-                }
-
+                    }
             }
             return chaineFraction;
         }
@@ -180,11 +168,12 @@ namespace FRACTION_CLASS
 
         private int GetPgcd()
         {
+         //Méthode "Last" recherche PGCD.
             List<int> TAB = new List<int>();
 
             
-            int numerateur=this.numerateur;
-            int denominateur=this.denominateur;
+            int numerateur = this.numerateur;
+            int denominateur = this.denominateur;
 
             int D = 0;
 
@@ -253,7 +242,6 @@ namespace FRACTION_CLASS
                 Console.WriteLine(this.numerateur/this.GetPgcd()+"/"+this.denominateur/this.GetPgcd());
             }
            
-           
         }
         
         public void Plus(Fraction _F)
@@ -264,7 +252,6 @@ namespace FRACTION_CLASS
             NUM = (this.numerateur * _F.denominateur) + (_F.numerateur * this.denominateur);
             DEN = (this.denominateur * _F.denominateur);
 
-           
             
             if (NUM < 0 && DEN < 0)
             {
@@ -277,8 +264,6 @@ namespace FRACTION_CLASS
 
             G.Reduire();
            
-          
-
         }
 
         public void Moins(Fraction _F)
@@ -312,8 +297,6 @@ namespace FRACTION_CLASS
             NUM = (this.numerateur * _F.numerateur);
             DEN = (this.denominateur * _F.denominateur);
 
-            
-
             if (NUM < 0 && DEN < 0)
             {
                 NUM = -(NUM);
@@ -334,8 +317,6 @@ namespace FRACTION_CLASS
 
             NUM = (this.numerateur * _F.denominateur);
             DEN = (this.denominateur * _F.numerateur);
-
-            
 
             if (NUM < 0 && DEN < 0)
             {
