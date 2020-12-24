@@ -10,18 +10,17 @@ namespace FRACTION_CLASS
     {
         static void Main(string[] args)
         {
-            string redo;
+            string redo = "O";
             do
             {
 
-            
             int N;
             int D;
 
             int M;
             int E;
               
-                Console.WriteLine("Entrez le numérateur (entier non-nul) de la fraction 1 : ");
+                Console.WriteLine("Entrez le numérateur(entier non-nul) de la fraction 1: " );
                 N = int.Parse(Console.ReadLine());
                 Console.WriteLine("Entrez le dénominateur (entier non-nul) de la fraction 1: ");
                 D = int.Parse(Console.ReadLine());
@@ -50,19 +49,19 @@ namespace FRACTION_CLASS
             F1.Egal(F2);
             Console.WriteLine(" ");
             Console.Write("La fraction " + F1.ToString() + " est égale à: ");
-            F1.Infos(N,D);
+            F1.InfoW(N,D);
             Console.Write("La fraction " + F2.ToString() + " est égale à: ");
-            F2.Infos(M,E);
+            F2.InfoW(M,E);
             Console.WriteLine(" ");
             Console.Write("L'opposé de la fraction " + F1.ToString() + " est: ");
             F1.Oppose();
             Console.Write("L'opposé de la fraction " + F2.ToString() + " est: ");
             F2.Oppose();
             Console.WriteLine(" ");
-            
-                
-            //Fin du calculateur...Procédure recommencer !Do..While!
-            Console.WriteLine("Souhaitez-vous effectuer un autre calcul ? O/N");
+
+
+                //Fin du calculateur...Procédure recommencer !Do..While!
+                Console.WriteLine("Souhaitez-vous effectuer un autre calcul ? O/N");
             redo = (Console.ReadLine()).ToUpper();
             if (redo != "O") { Console.WriteLine("Opération terminée !"); }
             } while (redo == "O");

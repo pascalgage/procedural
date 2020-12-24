@@ -45,9 +45,19 @@ namespace FRACTION_CLASS
         {
             double resultN;
             resultN= N / O;
+            resultN=(Math.Round(resultN,2));
+            return resultN;  
+        }
+
+        public double InfoW(double N,double O)
+        {
+            double resultN;
+            resultN= N / O;
             Console.WriteLine(Math.Round(resultN,2));
             return resultN;  
         }
+
+
 
         public override string ToString()
         {
@@ -73,50 +83,63 @@ namespace FRACTION_CLASS
 
         public void Inverse()
         {
-            int temp = this.numerateur;
-            this.numerateur = this.denominateur;
-            this.denominateur = temp;
-            
+                int temp = this.numerateur;
+                this.numerateur = this.denominateur;
+                this.denominateur = temp;
         }
 
         public bool Superieur(Fraction _F)
         {
-            if ((this.numerateur/this.denominateur) <= (_F.numerateur / _F.denominateur))
+            double A= this.Infos(this.numerateur,this.denominateur);
+            double B= _F.Infos(_F.numerateur,_F.denominateur);
+            bool test=false;
+
+            if ((A) <= (B))
             {
-                return false;
+                test= false;
             }
             else
             {
                 Console.WriteLine(this+ " est supérieur à "+_F);
-                return true;
+                test= true;
             }
+            return test;
         }
 
         public bool Inferieur(Fraction _F)
         {
-            if ((this.numerateur / this.denominateur) >= (_F.numerateur / _F.denominateur))
+            double A= this.Infos(this.numerateur,this.denominateur);
+            double B= _F.Infos(_F.numerateur,_F.denominateur);
+            bool test=false;
+
+            if ((A) >= (B))
             {
-                return false;
+                test= false;
             }
             else
             {
                 Console.WriteLine(this + " est inférieur à " + _F);
-                return true;
+                test= true;
             }
+            return test;
         }
 
         public bool Egal(Fraction _F)
         {
-            if ((this.numerateur / this.denominateur) == (_F.numerateur / _F.denominateur))
+            double A= this.Infos(this.numerateur,this.denominateur);
+            double B= _F.Infos(_F.numerateur,_F.denominateur);
+            bool test=false;
+
+            if ((A) == (B))
             {
                 Console.WriteLine(this + " est égal à " + _F);
-                return true;
+                test= true;
             }
             else
             {
-                return false;
+                test=false;
             }
-
+            return test;
         }
 
         private int GetPgcd()
@@ -162,13 +185,24 @@ namespace FRACTION_CLASS
 
         }
 
-        private void Reduire(Fraction _F)
+        private void Reduire()
         {
+           if(this.denominateur/this.GetPgcd()==1)
+            {
+                Console.WriteLine(this.numerateur/this.GetPgcd());
+            }
+            else
+            {
+            Console.WriteLine(this.numerateur/this.GetPgcd()+"/"+this.denominateur/this.GetPgcd());
+            }
+           if(this.numerateur/this.GetPgcd()==0)
+            {
+            Console.WriteLine(this.numerateur/this.GetPgcd());
+            }
            
-           Console.WriteLine(this.numerateur/ _F.GetPgcd()+"/"+this.denominateur/_F.GetPgcd());
-
+           
         }
-
+        
         public void Plus(Fraction _F)
         {
             int NUM;
@@ -177,10 +211,7 @@ namespace FRACTION_CLASS
             NUM = (this.numerateur * _F.denominateur) + (_F.numerateur * this.denominateur);
             DEN = (this.denominateur * _F.denominateur);
 
-            if (NUM == 0)
-            {
-                DEN = 0;
-            }
+           
             
             if (NUM < 0 && DEN < 0)
             {
@@ -191,9 +222,10 @@ namespace FRACTION_CLASS
             Fraction G;
             G = new Fraction(NUM, DEN);
 
-            G.Reduire(G);
-            
-            
+            G.Reduire();
+           
+          
+
         }
 
         public void Moins(Fraction _F)
@@ -204,10 +236,7 @@ namespace FRACTION_CLASS
             NUM = (this.numerateur * _F.denominateur) - (_F.numerateur * this.denominateur);
             DEN = (this.denominateur * _F.denominateur);
 
-            if (NUM == 0)
-            {
-                DEN = 0;
-            }
+            
 
             if (NUM < 0 && DEN < 0)
             {
@@ -218,7 +247,8 @@ namespace FRACTION_CLASS
             Fraction H;
             H = new Fraction(NUM,DEN);
 
-            H.Reduire(H);
+            H.Reduire();
+            
         }
 
         public void Multiplie(Fraction _F)
@@ -229,10 +259,7 @@ namespace FRACTION_CLASS
             NUM = (this.numerateur * _F.numerateur);
             DEN = (this.denominateur * _F.denominateur);
 
-            if (NUM == 0)
-            {
-                DEN = 0;
-            }
+            
 
             if (NUM < 0 && DEN < 0)
             {
@@ -243,9 +270,8 @@ namespace FRACTION_CLASS
             Fraction I;
             I = new Fraction(NUM, DEN);
 
-            I.Reduire(I);
-            Console.WriteLine("soit en valeur numérique : ");
-            I.Infos(NUM,DEN);
+            I.Reduire();
+            
         }
 
         public void Divise(Fraction _F)
@@ -256,10 +282,7 @@ namespace FRACTION_CLASS
             NUM = (this.numerateur * _F.denominateur);
             DEN = (this.denominateur * _F.numerateur);
 
-            if (NUM==0)
-            {
-                DEN = 0;
-            }
+            
 
             if (NUM < 0 && DEN < 0)
             {
@@ -270,7 +293,8 @@ namespace FRACTION_CLASS
             Fraction J;
             J = new Fraction(NUM, DEN);
 
-            J.Reduire(J);
+            J.Reduire();
+            
         }
         
     }
