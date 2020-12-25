@@ -12,3 +12,10 @@ C:\TP_gageABC\procedural2\procedural\FRACTION_CLASS\FRACTION_CLASS\obj\Debug\FRA
 C:\TP_gageABC\procedural2\procedural\FRACTION_CLASS\FRACTION_CLASS\obj\Debug\FRACTION_CLASS.csproj.CoreCompileInputs.cache
 C:\TP_gageABC\procedural2\procedural\FRACTION_CLASS\FRACTION_CLASS\obj\Debug\FRACTION_CLASS.exe
 C:\TP_gageABC\procedural2\procedural\FRACTION_CLASS\FRACTION_CLASS\obj\Debug\FRACTION_CLASS.pdb
+C:\Users\pasca\OneDrive\Bureau\FRACTION_CLASS\FRACTION_CLASS\bin\Debug\FRACTION_CLASS.exe.config
+C:\Users\pasca\OneDrive\Bureau\FRACTION_CLASS\FRACTION_CLASS\bin\Debug\FRACTION_CLASS.exe
+C:\Users\pasca\OneDrive\Bureau\FRACTION_CLASS\FRACTION_CLASS\bin\Debug\FRACTION_CLASS.pdb
+C:\Users\pasca\OneDrive\Bureau\FRACTION_CLASS\FRACTION_CLASS\obj\Debug\FRACTION_CLASS.csprojAssemblyReference.cache
+C:\Users\pasca\OneDrive\Bureau\FRACTION_CLASS\FRACTION_CLASS\obj\Debug\FRACTION_CLASS.csproj.CoreCompileInputs.cache
+C:\Users\pasca\OneDrive\Bureau\FRACTION_CLASS\FRACTION_CLASS\obj\Debug\FRACTION_CLASS.exe
+C:\Users\pasca\OneDrive\Bureau\FRACTION_CLASS\FRACTION_CLASS\obj\Debug\FRACTION_CLASS.pdb

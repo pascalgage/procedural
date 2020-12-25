@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using FRACTION_APP;
 namespace FRACTION_CLASS
 {
     public class Fraction
@@ -13,32 +13,55 @@ namespace FRACTION_CLASS
         private int denominateur;
 
         //propriétés....
-        public int UNnumerateur
+        public int Numerateur
         {
             get { return numerateur; }
 
             set { numerateur = value; }
         }
         
-        public int UNdenominateur
+        public int Denominateur
         {
             get { return denominateur; }
 
             set { denominateur = value; }
         }
         //constructeur....
-        public Fraction(int UNnumerateur, int UNdenominateur)
+        public Fraction(int _numerateur, int _denominateur)
         {
-            this.numerateur = UNnumerateur;
-            this.denominateur = UNdenominateur;
+            try
+            {
+                this.numerateur = _numerateur;
+                this.denominateur = _denominateur;
+
+                double uneFraction = (double)this.numerateur / this.Denominateur;
+            }
+            catch(ArithmeticException e)
+            {
+                Console.WriteLine("Nous ne pouvons diviser par zéro" + e.Message);
+            }
+            catch(Exception er)
+            {
+                Console.WriteLine(er.Message);
+            }
+            
             
         }
-        //Constructeur à vide...
+        
+        public Fraction(int _numerateur)
+        {
+            this.numerateur = _numerateur;
+            this.denominateur = 1;
+        }
+        //Constructeur à vide
+
         public Fraction()
         {
             this.numerateur = 0;
             this.denominateur = 1;
         }
+
+
         
         //méthodes....
         public double Infos(double N,double O)
@@ -211,8 +234,9 @@ namespace FRACTION_CLASS
         }
 
         private void Reduire()
+
         {
-           if(this.denominateur/this.GetPgcd()==1)
+           if(this.denominateur/this.GetPgcd()==1 || this.denominateur / this.GetPgcd() == 0)
             {
                 Console.WriteLine(this.numerateur/this.GetPgcd());
             }
@@ -221,27 +245,18 @@ namespace FRACTION_CLASS
                 Console.WriteLine(-this.numerateur/this.GetPgcd());
             }
             
-           if(this.numerateur/this.GetPgcd()==0)
+           if(this.denominateur/this.GetPgcd()<-1 || this.denominateur / this.GetPgcd()>1)
             {
-            Console.WriteLine(this.numerateur/this.GetPgcd());
-            }
-
-           if(this.denominateur/this.GetPgcd()<0)
-            {
-                if(this.numerateur/this.GetPgcd()>0)
+                if (this.numerateur / this.GetPgcd() == 0)
                 {
-                    Console.WriteLine((-this.numerateur/this.GetPgcd())+"/"+(-this.denominateur/this.GetPgcd()));
+                    Console.WriteLine(this.numerateur / this.GetPgcd());
                 }
                 else
                 {
-                     Console.WriteLine((-this.numerateur/this.GetPgcd())+"/"+(-this.denominateur/this.GetPgcd()));
+                    Console.WriteLine(this.numerateur / this.GetPgcd() + "/" + this.denominateur / this.GetPgcd());
                 }
-            }
-            else
-            {
-                Console.WriteLine(this.numerateur/this.GetPgcd()+"/"+this.denominateur/this.GetPgcd());
-            }
-           
+
+            } 
         }
         
         public void Plus(Fraction _F)
