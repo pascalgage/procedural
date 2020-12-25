@@ -139,7 +139,7 @@ namespace FRACTION_CLASS
         {
             double A= this.Infos(this.numerateur,this.denominateur);
             double B= _F.Infos(_F.numerateur,_F.denominateur);
-            bool test=false;
+            bool test;
 
             if ((A) <= (B))
             {
@@ -157,7 +157,7 @@ namespace FRACTION_CLASS
         {
             double A= this.Infos(this.numerateur,this.denominateur);
             double B= _F.Infos(_F.numerateur,_F.denominateur);
-            bool test=false;
+            bool test;
 
             if ((A) >= (B))
             {
@@ -175,7 +175,7 @@ namespace FRACTION_CLASS
         {
             double A= this.Infos(this.numerateur,this.denominateur);
             double B= _F.Infos(_F.numerateur,_F.denominateur);
-            bool test=false;
+            bool test;
 
             if ((A) == (B))
             {
@@ -259,7 +259,7 @@ namespace FRACTION_CLASS
             } 
         }
         
-        public void Plus(Fraction _F)
+        public Fraction Plus(Fraction _F)
         {
             int NUM;
             int DEN;
@@ -278,18 +278,17 @@ namespace FRACTION_CLASS
             G = new Fraction(NUM, DEN);
 
             G.Reduire();
+            return G;
            
         }
 
-        public void Moins(Fraction _F)
+        public Fraction Moins(Fraction _F)
         {
             int NUM;
             int DEN;
 
             NUM = (this.numerateur * _F.denominateur) - (_F.numerateur * this.denominateur);
             DEN = (this.denominateur * _F.denominateur);
-
-            
 
             if (NUM < 0 && DEN < 0)
             {
@@ -301,10 +300,11 @@ namespace FRACTION_CLASS
             H = new Fraction(NUM,DEN);
 
             H.Reduire();
+            return H;
             
         }
 
-        public void Multiplie(Fraction _F)
+        public Fraction Multiplie(Fraction _F)
         {
             int NUM;
             int DEN;
@@ -322,10 +322,11 @@ namespace FRACTION_CLASS
             I = new Fraction(NUM, DEN);
 
             I.Reduire();
+            return I;
             
         }
 
-        public void Divise(Fraction _F)
+        public Fraction Divise(Fraction _F)
         {
             int NUM;
             int DEN;
@@ -343,6 +344,7 @@ namespace FRACTION_CLASS
             J = new Fraction(NUM, DEN);
 
             J.Reduire();
+            return J;
             
         }
         
