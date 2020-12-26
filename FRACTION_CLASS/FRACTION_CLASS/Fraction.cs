@@ -116,17 +116,17 @@ namespace FRACTION_CLASS
         {
             string fractionOppose;
 
-            if(this.numerateur <0 && this.denominateur < 0)
+            if(this.numerateur < 0 && this.denominateur > 0)
             {
-                fractionOppose = (this.numerateur) + "/" + -(this.denominateur);
+                fractionOppose = -(this.numerateur) + "/" + Math.Abs(this.denominateur);
             }
             else
             {
-                fractionOppose = -(this.numerateur) + "/" + (this.denominateur);
+                fractionOppose = (this.numerateur) + "/" + Math.Abs(this.denominateur);
             }
-            if (this.numerateur >= 0 && this.denominateur > 0)
+            if (this.numerateur > 0 && this.denominateur > 0)
             {
-                fractionOppose = (this.numerateur) + "/" + -(this.denominateur);
+                fractionOppose = -(this.numerateur) + "/" + Math.Abs(this.denominateur);
             }
             
             Console.WriteLine(fractionOppose);
