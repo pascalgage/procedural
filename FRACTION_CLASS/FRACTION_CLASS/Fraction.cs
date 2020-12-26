@@ -108,6 +108,7 @@ namespace FRACTION_CLASS
                    chaineFraction += this.numerateur + "/" + this.denominateur;
                     }
             }
+            
             return chaineFraction;
         }
 
@@ -121,7 +122,11 @@ namespace FRACTION_CLASS
             }
             else
             {
-                fractionOppose = -(this.numerateur) + "/" + this.denominateur;
+                fractionOppose = -(this.numerateur) + "/" + (this.denominateur);
+            }
+            if (this.numerateur >= 0 && this.denominateur > 0)
+            {
+                fractionOppose = (this.numerateur) + "/" + -(this.denominateur);
             }
             
             Console.WriteLine(fractionOppose);
@@ -236,27 +241,28 @@ namespace FRACTION_CLASS
         private void Reduire()
 
         {
-           if(this.denominateur/this.GetPgcd()==1 || this.denominateur / this.GetPgcd() == 0)
+            if(this.denominateur / this.GetPgcd() == 1 || this.denominateur / this.GetPgcd() == -1 || this.numerateur==0)
             {
-                Console.WriteLine(this.numerateur/this.GetPgcd());
+                Console.WriteLine(this.numerateur / this.GetPgcd());
             }
-           if(this.denominateur/this.GetPgcd()==-1)
+            else
             {
-                Console.WriteLine(-this.numerateur/this.GetPgcd());
-            }
-            
-           if(this.denominateur/this.GetPgcd()<-1 || this.denominateur / this.GetPgcd()>1)
-            {
-                if (this.numerateur / this.GetPgcd() == 0)
+                if(this.denominateur / this.GetPgcd() < 0)
                 {
-                    Console.WriteLine(this.numerateur / this.GetPgcd());
+                    if(this.numerateur / this.GetPgcd() > 0)
+                    {
+                        Console.WriteLine(-this.numerateur / this.GetPgcd() + "/" + -this.denominateur / this.GetPgcd());
+                    }
+                    else
+                    {
+                        Console.WriteLine(-this.numerateur / this.GetPgcd() + "/" + -this.denominateur / this.GetPgcd());
+                    }
                 }
                 else
                 {
                     Console.WriteLine(this.numerateur / this.GetPgcd() + "/" + this.denominateur / this.GetPgcd());
                 }
-
-            } 
+            }
         }
         
         public Fraction Plus(Fraction _F)
@@ -267,7 +273,6 @@ namespace FRACTION_CLASS
             NUM = (this.numerateur * _F.denominateur) + (_F.numerateur * this.denominateur);
             DEN = (this.denominateur * _F.denominateur);
 
-            
             if (NUM < 0 && DEN < 0)
             {
                 NUM = -(NUM);
@@ -278,6 +283,7 @@ namespace FRACTION_CLASS
             G = new Fraction(NUM, DEN);
 
             G.Reduire();
+            
             return G;
            
         }
