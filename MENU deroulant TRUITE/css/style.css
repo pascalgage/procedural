@@ -1,14 +1,30 @@
 body{
-	margin: 100px;
+	margin: 20px;
 	background-color: lightgreen;
 }
 header{
+	margin-top: 300px;
 	width: 100%;
-	height: 50px;
-	background-color: #3498DB;
+	height: auto;
+	background-color: #14911D;
 	position: relative;
 	
 
+}
+img{
+	cursor: pointer;
+	margin-top: 200px;
+	margin-left: 200px;
+}
+p{
+	margin-top: -200px;
+	margin-left: 470px;
+	text-align: justify;
+}
+.text{
+	margin-left: 200px;
+	margin-top: -14px;
+	text-align: justify;
 }
 .navigation{
 	text-align: center;
@@ -35,7 +51,7 @@ header{
 	font-size: 12px;
 }
 .navigation a{
-	font-family: sans-serif;
+	font-family: verdana;
 	display: block;
 	width: 150px;
 	height: 30px;
@@ -49,7 +65,7 @@ header{
 }
 .navigation li:hover > ul{
 	display: block;
-	background-color: #85C1E9;
+	background-color: #1AE26B;
 	border-radius: 13px;
 	
 }
@@ -60,5 +76,8 @@ header{
 .navigation .niveau2:hover > ul{
 	position: relative;
 	display: block;
-	background-color: #85C1E9;
+	background-color: #1AE26B;
+}
+.niveau2 li:hover{
+	background-color: #3498DB;
 }
