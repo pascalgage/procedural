@@ -2,33 +2,65 @@ body{
 	margin: 20px;
 	background-color: lightgreen;
 }
+.button {
+	height: 30px;
+	width: 30px;
+	float: right;
+	margin-top: -50px;
+	margin-right: 10px;
+	position: relative;
+	cursor: pointer;
+	background-color: #2DBDDE;
+	border-radius: 3px; 
+}
+
+.headhide{
+	margin-left: -3000px;
+	transition-duration: 2s;
+}
+.headhide_open{
+	margin-left: 0px;
+	transition-duration: 2s;
+}
+
 header{
-	margin-top: 300px;
+	margin-top: 200px;
 	width: 100%;
 	height: auto;
 	background-color: #14911D;
 	position: relative;
+	border: 1px solid red;
 	
-
 }
+
 img{
 	cursor: pointer;
-	margin-top: 200px;
+	margin-top: -1000px;
 	margin-left: 200px;
 }
 p{
+	height: 200px;
 	margin-top: -200px;
 	margin-left: 470px;
 	text-align: justify;
+}
+nav{
+	float left;
+	margin-top: 150px;
+	width: 180px;
+	height: 200px;
+	border: 2px solid green;
 }
 .text{
 	margin-left: 200px;
 	margin-top: -14px;
 	text-align: justify;
 }
+
 .navigation{
 	text-align: center;
 }
+
 .navigation, .navigation a{
 	color: black;
 	list-style: none;
@@ -49,6 +81,7 @@ p{
 	display: inline-block;
 	position: relative;
 	font-size: 12px;
+	
 }
 .navigation a{
 	font-family: verdana;
@@ -63,21 +96,26 @@ p{
 	display: none;
 	position: absolute;
 }
+
 .navigation li:hover > ul{
 	display: block;
 	background-color: #1AE26B;
 	border-radius: 13px;
 	
 }
-.navigation .niveau2{
 
-	background-color: red;
-}
 .navigation .niveau2:hover > ul{
+	border-radius: 13px;
 	position: relative;
 	display: block;
 	background-color: #1AE26B;
 }
-.niveau2 li:hover{
+.niveau2 li:hover > a{
+	
+	border-radius: 13px;
 	background-color: #3498DB;
+}
+.niveau3 li:hover > a{
+	background-color: #3498DB;
+	display: block;
 }
