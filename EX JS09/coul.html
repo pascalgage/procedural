@@ -6,7 +6,35 @@
     <title>LES COULEURS</title>
     <script src="js/coul.js" async></script>
     <link rel="stylesheet" type="text/css" href="css/couleurs.css">
-    
+    <style>
+        body {
+            background-color: rgb(215, 213, 255);
+        }
+        fieldset {
+           
+            width: 80%;
+            background-color: rgb(143, 188, 143);
+            border: 3px solid white;
+            border-radius: 12px;
+        }
+        legend {
+            text-shadow: 3px 3px 5px rgb(32, 3, 3);
+            font-size: 1.8em;
+        }
+        input[type="button"]{
+            margin-left: 70px;
+        }
+        input[id="blue"]{
+            margin-left: 130px;
+        }
+        input[id="green"]{
+            margin-left: 100px;
+        }
+        input[type="text"]{
+            text-align: center;
+        }
+
+    </style>
 </head>
 <body>
 	<fieldset>
@@ -15,9 +43,9 @@
         <input type="text" name="" value="" id="B"/>
         <input type="text" name="" value="" id="C"/>
         <br><br>
-        <input type="button" name="" value="ROUGE" id="red"onclick = "changeColor('red');"/>
-        <input type="button" name="" value="VERT" id="green"onclick = "changeColor('green');"/>
-        <input type="button" name="" value="BLEU" id="blue"onclick = "changeColor('blue');"/>
+        <input type="button" name="" value="ROUGE" id="red"/>
+        <input type="button" name="" value="VERT" id="green"/>
+        <input type="button" name="" value="BLEU" id="blue"/>
     </fieldset>
     
 </body>
