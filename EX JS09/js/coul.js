@@ -1,17 +1,26 @@
 function changing(){
 
-var color ='#'+(document.querySelector("#A").value)+
-(document.querySelector("#B").value)+
-(document.querySelector("#C").value);
-color=color.toUpperCase();
+let A=(document.querySelector("#A").value);
+let D= A.toUpperCase();
+let B=(document.querySelector("#B").value);
+let E= B.toUpperCase();
+let C=(document.querySelector("#C").value);
+let F= C.toUpperCase();
+var color ='#'+A+B+C;
 document.body.style.background = color;
+document.querySelector("#A").value= D;
+document.querySelector("#B").value= E;
+document.querySelector("#C").value= F;
+
 }
-var test1=document.querySelector("#C");
+var test1=document.querySelector("#A");
 test1.addEventListener("blur",changing);
-var test2=document.querySelector("#A");
+var test2=document.querySelector("#B");
 test2.addEventListener("blur",changing);
-var test3=document.querySelector("#B");
+var test3=document.querySelector("#C");
 test3.addEventListener("blur",changing);
+
+
 
 function changeRED(){
 	var color='red';
