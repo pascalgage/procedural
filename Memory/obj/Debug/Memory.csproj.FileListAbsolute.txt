@@ -1,0 +1,7 @@
+C:\TP_gageABC\procedural2\procedural\Memory\bin\Debug\Memory.exe.config
+C:\TP_gageABC\procedural2\procedural\Memory\bin\Debug\Memory.exe
+C:\TP_gageABC\procedural2\procedural\Memory\bin\Debug\Memory.pdb
+C:\TP_gageABC\procedural2\procedural\Memory\obj\Debug\Memory.csprojAssemblyReference.cache
+C:\TP_gageABC\procedural2\procedural\Memory\obj\Debug\Memory.csproj.CoreCompileInputs.cache
+C:\TP_gageABC\procedural2\procedural\Memory\obj\Debug\Memory.exe
+C:\TP_gageABC\procedural2\procedural\Memory\obj\Debug\Memory.pdb
